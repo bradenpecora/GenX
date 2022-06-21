@@ -61,6 +61,7 @@ using Statistics
 #using CPLEX
 #using MOI
 #using SCIP
+using HiGHS
 using BenchmarkTools
 using Clp
 using Cbc
@@ -81,6 +82,7 @@ include("configure_solver/configure_scip.jl")
 include("configure_solver/configure_cplex.jl")
 include("configure_solver/configure_clp.jl")
 include("configure_solver/configure_cbc.jl")
+include("configure_solver/configure_highs.jl")
 include("configure_solver/configure_solver.jl")
 
 # Load input data

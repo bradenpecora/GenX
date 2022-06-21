@@ -46,6 +46,9 @@ function configure_solver(solver::String, solver_settings_path::String)
 	elseif solver == "scip"
 		scip_settings_path = joinpath(solver_settings_path, "scip_settings.yml")
 		OPTIMIZER = configure_scip(scip_settings_path)
+	elseif solver == "highs"
+		highs_settings_path = joinpath(solver_settings_path, "highs_settings.yml")
+		OPTIMIZER = configure_highs(highs_settings_path)
 	end
 
 	return OPTIMIZER
